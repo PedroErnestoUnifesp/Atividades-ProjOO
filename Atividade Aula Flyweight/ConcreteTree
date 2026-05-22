@@ -1,0 +1,27 @@
+públic class ConcreteTree implements Tree {
+  private String color;
+  private float height;
+  private float width;
+  private int x;
+  private int y;
+
+public ConcreteTree(String color, float width, float height){
+  this.color=color;
+  this.width=width;
+  this.height=height;
+}
+
+@Override
+public void plant() {
+  System.out.println ("Plantin a " + this.color + " tree at (" + x + "," + y +")");
+}
+
+@Override
+public void setPosition(int x, int y) {
+  this.x=x;
+  this.y=y;
+}
+
+
+
+}
