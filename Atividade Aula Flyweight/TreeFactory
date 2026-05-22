@@ -1,0 +1,16 @@
+import java.util.HashMap;
+import java.util.Map
+
+public class TreeFactory {
+  private static final Map<TreeState, Tree> treeMap = new HashMap<>();
+  public static Tree getTree(String color, float width, float height) {
+    TreeState key = new TreeState(color, height, width);
+    Tree tree = treeMap.get(key);
+    if (tree == null) {
+      tree = new ConcreteTree(color, width, height);
+      treeMap.put(key, tree)
+      System.out.println("Planting a " + color + " tree with size " + width + "x" + height +);
+    }
+    return tree;
+  }
+}
