@@ -1,4 +1,3 @@
-public interface Tree{
-  void plant();
-  void setPosition(int x, int y);
+public interface Tree {
+    void plant(int x, int y);
 }
