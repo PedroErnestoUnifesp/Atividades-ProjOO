@@ -1,1 +1,1 @@
-public record TreeState(String color, int height, int width) {}
+public record TreeState(String color, float height, float width) {}
