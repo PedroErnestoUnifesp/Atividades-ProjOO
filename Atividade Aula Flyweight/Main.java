@@ -7,12 +7,12 @@ public class Main {
 
     public static void main(String[] args) {
         List<PlantedTree> forest = new ArrayList<>();
-        String[] colors = {"Verde Musgo", "Verde Claro", "Amarelo Outono"};
+        String[] colors = {"Dark Green", "Light Green", "Amber Yellow"};
         float[] sizes = {5.0f, 6.5f, 7.0f};
 
         int treesToPlant = 10000; // Queremos 10 mil árvores
 
-        System.out.println("Iniciando o plantio da floresta...\n");
+        System.out.println("Populating forest...\n");
 
         for (int i = 0; i < treesToPlant; i++) {
             // Gerando características aleatórias para a árvore
@@ -34,8 +34,8 @@ public class Main {
             forest.add(new PlantedTree(x, y, flyweightTree));
         }
 
-        System.out.println("\n--- Resumo ---");
-        System.out.println("Total de árvores na floresta (visual/lógico): " + forest.size());
-        System.out.println("Total de instâncias REAIS de ConcreteTree criadas na memória: " + TreeFactory.getCreatedTreesCount());
+        System.out.println("\n--- Summary ---");
+        System.out.println("Total trees in the forest (visual/logic): " + forest.size());
+        System.out.println("Total of REAL instances from ConcreteTree created in memory: " + TreeFactory.getCreatedTreesCount());
     }
 }
